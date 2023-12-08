@@ -1,9 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+
 body {
-    background-color: powderblue;
-  }
+	background-image: linear-gradient(-45deg, #ffffff, #b4d2e0, #78e6ee, #106ba0, #b1bcc4 );
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  margin: 0px;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+} 
+
   h1 {
-    color: blue;
+    color: rgb(255, 255, 255);
+    padding-top: 10%;
+    margin: 0%;
+    align-items: center;
+    text-align: center;
+    font-size: 150px;
+    width: 100%;
   }
   p {
-    color: red;
+    color: rgb(0, 0, 0);
+    font-family: 'Square Peg', cursive;
   }
+
+/* navigation */
+  ul {
+    list-style-type: none;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+  }
+  li {
+    float: left;
+  }
+  li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: montserrat;
+    font-weight: bold;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #a1a4a7;
+  }
+
+/* neu ab hier */
+
+/* Container für Bilder und Text */
+.container {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 20px 20px; 
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.grosses_bild { 
+  grid-area: 1 / 2 / 2 / 3;
+}
+.grosses_bild img{
+  width: 100%;
+  filter: blur(5px); /* Setze die Unscharf-Filter-Eigenschaft */
+  transition: filter 0.5s ease; /* Füge eine sanfte Animation hinzu */
+  position: relative;
+  z-index: 0;
+}
+.grosses_bild.focus img {
+  filter: blur(0); /* Setze die Unscharf-Filter-Eigenschaft zurück */
+}
+.text_monochrom{
+  grid-area: 1 / 2 / 2 / 3;
+}
+.text_monochrom p{
+  color: white;
+  font-size: 27px;
+  width: 85%;
+  margin-left: 7%;
+  margin-top: 40%;
+  text-align: justify;
+  font-family: 'Square Peg', cursive;
+  position: relative;
+  z-index: 1;
+}
+#meinText {
+  transition: margin-top 0.5s ease; /* Füge eine sanfte Animation hinzu */
+}
+.centered {
+  font-family: 'Square Peg', cursive;
+  font-size: 85px;
+  position: absolute;
+  top: 3%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.animal { 
+  grid-area: 1 / 3 / 2 / 4;
+}
+.animal img{
+  width: 85%;
+  margin-top: -20%;
+  filter: blur(5px); /* Setze die Unscharf-Filter-Eigenschaft */
+  transition: filter 0.5s ease; /* Füge eine sanfte Animation hinzu */
+  position: relative;
+  z-index: 0;
+}
+.ueberschrift_animal{
+  font-family: 'Square Peg', cursive;
+  font-size: 85px;
+  margin-left: 12%;
+  margin-top: -20%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.text_animal p{
+  font-family: 'Square Peg', cursive;
+  color: white;
+  font-size: 27px;
+  width: 80%;
+  padding-left: 10%;
+  margin-top: -60%;
+  text-align: justify;
+  position: relative;
+  z-index: 1;
+}
+#text_animal {
+  transition: padding-top 0.5s ease; /* Füge eine sanfte Animation hinzu */
+}
+.animal-focus img {
+  filter: blur(0); /* Setze die Unscharf-Filter-Eigenschaft zurück */
+}
+
+.boots {
+  grid-area: 2 / 2 / 3 / 3;
+  position: relative;
+}
+
+.boots img {
+  width: 100%;
+  margin-top: -5%;
+  filter: blur(5px);
+  transition: filter 0.5s ease;
+  position: relative;
+  z-index: 0;
+}
+
+.boots-focus img {
+  filter: blur(0);
+}
+
+.ueberschrift_boots {
+  font-family: 'Square Peg', cursive;
+  font-size: 85px;
+  margin-left: 40%;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.text_boots p {
+  font-family: 'Square Peg', cursive;
+  color: white;
+  font-size: 27px;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: -90%;
+  text-align: justify;
+  position: relative;
+  z-index: 1;
+}
+
+#boots {
+  transition: margin-top 0.5s ease;
+}
+
+.boots-focus img {
+  filter: blur(0);
+}
+#text_boots {
+  transition: padding-top 0.5s ease; /* Füge eine sanfte Animation hinzu */
+}
+
+
+/*nordic*/
+.nordic {
+  grid-area: 2 / 3 / 3 / 4;
+  position: relative;
+}
+
+.nordic img {
+  width: 100%;
+  margin-top: -45%;
+  filter: blur(5px);
+  transition: filter 0.5s ease;
+  position: relative;
+  z-index: 0;
+}
+
+.nordic-focus img {
+  filter: blur(0);
+}
+
+.ueberschrift_nordic {
+  font-family: 'Square Peg', cursive;
+  font-size: 85px;
+  position: absolute;
+  top: 15%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.text_nordic p {
+  font-family: 'Square Peg', cursive;
+  color: white;
+  font-size: 27px;
+  width: 80%;
+  margin-top: -65%;
+  margin-left: 10%;
+  text-align: justify;
+  position: relative;
+  z-index: 1;
+}
+
+#nordic {
+  transition: margin-top 0.5s ease;
+}
+
+.nordic-focus img {
+  filter: blur(0);
+}
+#text_nordic{
+  transition: padding-top 0.5s ease; /* Füge eine sanfte Animation hinzu */
+}
+
+/*accessoirs*/
+.accessoir {
+  grid-area: 3 / 2 / 4 / 3;
+  position: relative;
+}
+
+.accessoir img {
+  width: 100%;
+  margin-top: -65%;
+  filter: blur(5px);
+  transition: filter 0.5s ease;
+  position: relative;
+  z-index: 0;
+}
+
+.accessoir-focus img {
+  filter: blur(0);
+}
+
+.ueberschrift_accessoir {
+  font-family: 'Square Peg', cursive;
+  font-size: 85px;
+  position: absolute;
+  top: -15%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.text_accessoir p {
+  font-family: 'Square Peg', cursive;
+  color: white;
+  font-size: 27px;
+  width: 80%;
+  margin-top: -25%;
+  margin-left: 10%;
+  text-align: justify;
+  position: relative;
+  z-index: 1;
+}
+
+#accessoir {
+  transition: margin-top 0.5s ease;
+}
+
+.accessoir-focus img {
+  filter: blur(0);
+}
+#nordic_text {
+  transition: margin-top 0.5s ease; /* Füge eine sanfte Animation hinzu */
+}
+
+/* party */
+.party {
+  grid-area:  3 / 3 / 4 / 4;
+  position: relative;
+}
+
+.party img {
+  width: 100%;
+  margin-top: -3%;
+  filter: blur(5px);
+  transition: filter 0.5s ease;
+  position: relative;
+  z-index: 0;
+}
+
+.party-focus img {
+  filter: blur(0);
+}
+
+.ueberschrift_party {
+  font-family: 'Square Peg', cursive;
+  font-size: 85px;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.text_party p {
+  font-family: 'Square Peg', cursive;
+  color: white;
+  font-size: 27px;
+  width: 80%;
+  margin-top: -25%;
+  left:10%;
+  text-align: justify;
+  position: relative;
+  z-index: 1;
+}
+
+#party {
+  transition: margin-top 0.5s ease;
+}
+
+.party-focus img {
+  filter: blur(0);
+}
+
+#party_text {
+  transition: margin-top 0.5s ease; /* Füge eine sanfte Animation hinzu */
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  margin-top: 10%;
+  color: white;
+}
+
+/* responisv */
+
+/* Weitere Anpassungen für kleinere Bildschirme, z.B. Tablets und Handys */
+@media screen and (max-width: 800px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  }
+  .centered {
+    font-size: 50px;
+    margin-top: -60px;
+    margin-left: -90px;
+}
+  
+ /* zum responsiv machen*/
+ 
+  /*Smartphones (Portrait und Landscape) - Kleine Bildschirme:
+
+  @media only screen and (max-width: 480px) { ... }
+  Tablets (Portrait und Landscape) - Mittlere Bildschirme:
+  
+  @media only screen and (min-width: 481px) and (max-width: 768px) { ... }
+  Laptops, Desktops - Größere Bildschirme:
+  
+  @media only screen and (min-width: 769px) { ... }
+  Große Bildschirme (Desktops, größere Laptops):
+  
+  @media only screen and (min-width: 1200px) { ... }
+
+/* Beispiel für Vendor-Präfixe für browserübergreifende Kompatibilität */
+.example {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
